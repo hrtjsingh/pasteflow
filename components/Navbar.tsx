@@ -35,18 +35,18 @@ export default function Navbar() {
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
         {session ? (
           <>
-            <Link href="/dashboard" style={linkStyle}>dashboard</Link>
+            <Link href="/dashboard" style={linkStyle}>Dashboard</Link>
             <button
               onClick={() => signOut({ callbackUrl: '/' })}
               style={ghostBtnStyle}
             >
-              sign out
+              Sign out
             </button>
           </>
         ) : (
           <>
-            <Link href="/auth/signin" style={linkStyle}>sign in</Link>
-            <Link href="/auth/register" style={accentBtnStyle}>register</Link>
+            <Link href="/auth/signin" style={linkStyle}>Sign in</Link>
+            <Link href="/auth/register" style={accentBtnStyle}>Register</Link>
           </>
         )}
       </div>

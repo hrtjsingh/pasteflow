@@ -114,10 +114,10 @@ export default function HomePage() {
 
       <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem' }} className="animate-fade-up-delay">
         <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
-          <input type="text" placeholder="title (optional)" value={title}
+          <input name="title" type="text" placeholder="title (optional)" value={title}
             onChange={e => setTitle(e.target.value)} style={{ ...inputStyle, flex: 1, minWidth: '200px' }} />
-          <select value={language} onChange={e => setLanguage(e.target.value)} style={selectStyle}>
-            {LANGUAGES.map(l => <option key={l} value={l}>{l}</option>)}
+          <select id="language" className='capitalize' value={language} onChange={e => setLanguage(e.target.value)} style={selectStyle}>
+            {LANGUAGES.map(l => <option key={l} value={l} className='capitalize'>{l}</option>)}
           </select>
         </div>
 
@@ -199,7 +199,7 @@ export default function HomePage() {
               cursor: loading ? 'not-allowed' : 'pointer', letterSpacing: '0.02em',
               transition: 'opacity 0.15s',
             }}>
-            {loading ? '⏳ creating...' : '→ share paste'}
+            {loading ? '⏳ Creating...' : '→ Share Paste'}
           </button>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
             anonymous · instant · no account needed
