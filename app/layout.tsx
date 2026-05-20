@@ -14,6 +14,9 @@ const devRefreshShim = `
 export const metadata: Metadata = {
   title: 'PasteFlow — Share text instantly',
   description: 'The fastest way to share text, code, and notes online.',
+  icons: {
+    icon: '/heart.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
